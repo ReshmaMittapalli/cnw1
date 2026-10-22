@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    printf("LOCAL AREA NETWORK (LAN)\n");
+    printf("------------------------\n");
+
+    printf("\nComputer IP Configuration:\n");
+    printf("PC1: 192.168.1.10\n");
+    printf("PC2: 192.168.1.11\n");
+    printf("PC3: 192.168.1.12\n");
+    printf("Subnet Mask: 255.255.255.0\n");
+    printf("Default Gateway: 192.168.1.1\n");
+
+    printf("\nTesting connectivity from PC1 to PC2:\n");
+    system("ping -n 4 192.168.1.11");
+
+    printf("\nTesting connectivity from PC1 to PC3:\n");
+    system("ping -n 4 192.168.1.12");
+
+    printf("\nLAN connectivity test completed.\n");
+
+    return 0;
+}
